@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="pressButton()">请求网络数据</button>
+		<p></p>
+		<script type="text/javascript">
+			//定义URL（需要拼接 页码）
+			var url = "http://www.marrymin.com/LOL/News?item=%E6%9C%80%E6%96%B0&pageIndex=";
+			
+			var i=1;
+			
+			//按钮相应函数
+			function pressButton () {
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState == 4) {
+						//获取完整的下载数据
+						var arr = JSON.parse(xhr.responseText);
+						
+						var p = document.querySelector("p");
+						
+						for (var j = 0; j < arr.length; j++) {
+							p.innerText = p.innerText + arr[j].title + "\n";
+						}				 
+					}		
+				}
+				xhr.open("GET",url + i, true);
+				xhr.send(null);
+				i++;
+			}
+			
+		</script>
+	</body>
+</html>

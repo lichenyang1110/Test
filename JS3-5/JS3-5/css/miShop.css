@@ -1,0 +1,287 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+}
+
+.clearFloat:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0;
+}
+
+#header {
+	width: 1346px;
+	height: 40px;
+	background-color: rgb(51, 51, 51);
+	margin: 0 auto;
+	position: relative;
+}
+
+#header>p:first-child {
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	color: rgb(66, 66, 66);
+	margin-left: 60px;
+	float: left;
+}
+
+#header>p:last-child {
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	color: rgb(66, 66, 66);
+	margin-right: 20px;
+	float: right;
+}
+
+#header>p>a {
+	color: rgb(176, 176, 176);
+}
+
+
+/*.hoverWhite:link{
+	color: rgb(176,176,176);
+}
+.hoverWhite:visited{
+	color: white;
+}*/
+#header>p>a:hover{
+	color: white;
+}
+
+#header_right {
+	width: 120px;
+	height: 40px;
+	float: right;
+	margin-right: 60px;
+}
+
+#header_hidden{
+	width: 315px;
+	height: 99px;
+	position: absolute;
+	top: 40px;
+	right: 60px;
+	line-height: 99px;
+	font-size: 12px;
+	text-align: center;
+	display: none;
+	border-left: 1px rgb(190,190,190) solid;
+	border-bottom: 1px rgb(190,190,190) solid;
+	border-right: 1px rgb(190,190,190) solid;
+}
+
+/*#header_right>img:hover{
+	src:url(../img/shop1.png);
+}*/
+
+#header_nav {
+	width: 1226px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+#header_nav>a {
+	display: block;
+	float: left;
+	margin-top: 22px;
+}
+
+#header_nav>a>img {
+	width: 55px;
+	height: 55px;
+}
+
+#header_nav>ul {
+	height: 100px;
+	float: left;
+	margin-left: 185px;
+}
+
+#header_nav>ul>li {
+	float: left;
+	margin: 40px 10px 0 10px;
+}
+
+#header_nav>ul>li:hover{
+	color: red;
+}
+
+#header_nav_right {
+	width: 295px;
+	height: 48px;
+	border: 1px solid rgb(224, 224, 224);
+	float: right;
+	margin-top: 25px;
+}
+
+#header_nav_right_left {
+	width: 244px;
+	height: 48px;
+	float: left;
+	border-right: 1px solid rgb(224, 224, 224);
+}
+
+#header_nav_right_left>p {
+	height: 48px;
+	line-height: 48px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+#header_nav_right_left>p>a {
+	font-size: 14px;
+	color: rgb(117, 117, 117);
+	background-color: rgb(238, 238, 238);
+}
+
+#header_nav_right_right {
+	width: 50px;
+	height: 48px;
+	float: left;
+}
+
+#container {
+	width: 1226px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#container_slide{
+	width: 1226px;
+	height: 460px;
+}
+
+.first_bt{
+	display: block;
+	position: absolute;
+	width: 41px;
+	height: 69px;
+	top: 195px;
+	left: 234px;
+	background-image: url(../img/button.png);
+	background-position: 66% 0;
+	outline: none;
+	border: none;
+}
+
+.second_bt{
+	display: block;
+	position: absolute;
+	width: 41px;
+	height: 69px;
+	top: 195px;
+	right: 0;
+	background-image: url(../img/button.png);
+	background-position: 100% 0;
+	outline: none;
+	border: none;	
+}
+
+#container_slide>ul{
+	height: 460px;
+	width: 8582px;
+	position: absolute;
+	left: -1226px;
+}
+
+#container_slide>ul>li{
+	float: left;
+}
+
+#container_slide>ol{
+	width: 234px;
+	height: 420px;
+	background-color: rgb(95,95,95);
+	position: absolute;
+	padding: 20px 0 20px 0;
+}
+
+#container_slide>ol>li{
+	height: 42px;
+	line-height: 42px;
+	padding-left: 30px;
+}
+
+#container_slide>ol>li:hover{
+	background-color: rgb(255,103,0);
+}
+
+#container_slide>ol>li>a{
+	display: block;
+	width: 175px;
+	font-size: 14px;
+	color: white;
+	font-weight:900;
+}
+
+.iconfont{
+	display: block;
+	float: right;
+	font-size: 16px;
+	font-family:"iconfont"!important;
+	font-style: normal;
+}
+
+#container_header{
+	width: 1226px;
+	height: 170px;
+	margin: 0 auto;
+	margin-top: 14px;
+}
+
+#container_header_first{
+	width: 234px;
+	height: 170px;
+	background-color: rgb(95,87,80);
+	float: left;
+	overflow: hidden;
+}
+
+#container_header_first a{
+	display: block;
+	width: 77px;
+	height: 85px;
+	float: left;
+	border-bottom: 1px solid rgb(102,94,87);
+}
+
+#container_header_first dt{
+	text-align: center;
+	padding-top: 20px;
+}
+
+#container_header_first dd{
+	text-align: center;
+	font-size: 12px;
+	color: rgb(200,197,194);
+	margin-top: 5px;
+}
+
+#container_header_first dd:hover{
+	color:white;
+}
+
+.container_headerDiv{
+	float: left;
+	margin-left: 14px;
+}
+
+.container_headerDiv img{
+	width: 316px;
+	height: 170px;
+}

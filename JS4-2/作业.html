@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.div-out{
+				width: 450px;
+				height: 630px;
+				padding-top: 15px;
+				background-color: rgb(224,224,224);
+				margin: 0 auto;
+				border-radius: 25px;
+			}
+			.div-header{
+				height: 15px;
+				width: 450px;
+			}
+			.div-header>span:nth-child(1){
+				margin-left: 165px;
+				display:block;
+				float: left;
+				width: 15px;
+				height: 15px;
+				margin-top: 0;
+				background-color: rgba(100,100,100,0.8);
+				border-radius: 50%;
+			}
+			.div-header>span:nth-child(2){
+				display: block;
+				float: left;
+				width: 50px;
+				height: 10px;
+				margin:2.5px 20px 5px 20px;
+				background-color: rgba(100,100,100,0.8);
+				border-radius: 15px;
+			}
+			.div-header>span:nth-child(3){
+				display: inline-block;
+				float: left;
+				width: 15px;
+				height: 15px;
+				margin-top: 0;
+				background-color: rgba(100,100,100,0.8);
+				border-radius: 50%;
+			}
+			.clear-float:after{
+					display: block;
+					clear: both;
+					content: "";
+					visibility: hidden;
+					height: 0;
+			}
+			.div-content{
+				box-sizing: border-box;
+				padding: 5px;
+				width: 430px;
+				height: 550px;
+				background-color: white;
+				margin: 10px auto 0;
+				overflow: auto;
+			}
+			.div-foot{
+				height: 40px;
+				padding-top: 14px;
+				width: 450px;
+				text-align: center;
+			}
+			.div-foot>button{
+				display: block;
+				width: 80px;
+				height: 25px;
+				border: none;
+				margin: 0 185px;
+				border-radius: 15px;
+				outline: none;
+				background-color: rgba(100,100,100,0.8);
+			}
+			.div-in{
+				box-sizing: border-box;
+				width: 405px;
+				height: 110px;
+				padding: 5px;
+				border-bottom: 1px dashed rgba(100,100,100,0.8);
+			}
+			.img-in{
+				display: block;
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+			.h4-in{
+				float: left;
+				width: 280px;
+				margin: 0 0 5px 10px;
+				overflow: auto;
+			}
+			.p-in{
+				float: left;
+				width: 280px;
+				margin-left: 10px;
+				text-indent: 24px;
+				font-size: 12px;
+				overflow: auto;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div-out">
+			<div class="div-header clear-float">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="div-content clear-float">
+			</div>
+			<div class="div-foot clear-float">
+				<button onclick="pressButton()">点击加载</button>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var str = "http://www.marrymin.com/LOL/News?item=%E6%9C%80%E6%96%B0&pageIndex=";
+			var index = 1;
+			function pressButton () {
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState == 4) {
+						var arr = JSON.parse(xhr.responseText);
+						for (var i = 0; i < arr.length; i++) {
+							var divIn =document.createElement("div");
+							var divContent = document.querySelector(".div-content");
+							divContent.appendChild(divIn);
+							divIn.setAttribute("class","div-in");
+							var imgIn =document.createElement("img");
+							divIn.appendChild(imgIn);
+							imgIn.setAttribute("class","img-in");
+							imgIn.src = arr[i].img;
+							var h4In = document.createElement("h5");
+							divIn.appendChild(h4In);
+							h4In.setAttribute("class","h4-in");
+							h4In.innerText = arr[i].title;
+							var pIn = document.createElement("p");
+							divIn.appendChild(pIn);
+							pIn.setAttribute("class","p-in");
+							pIn.innerText = arr[i].desc;
+						}
+					}
+				}
+				xhr.open("GET",str + index,true);
+				xhr.send(null);
+				index ++;
+			}
+		</script>
+	</body>
+</html>
