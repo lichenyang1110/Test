@@ -1,0 +1,6 @@
+{
+  "name": "Test",
+  "tagline": "这是我的第一个github仓库",
+  "body": "<!DOCTYPE html>\r\n<html>\r\n\t<head>\r\n\t\t<meta charset=\"UTF-8\">\r\n\t\t<title></title>\r\n\t</head>\r\n\t\t<style type=\"text/css\">\r\n\t\t\t.box{\r\n\t\t\t\twidth: 200px;\r\n\t\t\t\theight: 200px;\r\n\t\t\t\tmargin: 100px auto;\r\n\t\t\t\tbackground-color: yellow;\r\n\t\t\t\tbox-shadow: 0px 5px 10px rgba(25,25,25,0.5);\r\n\t\t\t}\r\n\t\t</style>\r\n\t<body>\r\n\t\t\r\n\t\t<div class=\"box\">\r\n\t\t\t\r\n\t\t</div>\r\n\t</body>\r\n</html>\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
